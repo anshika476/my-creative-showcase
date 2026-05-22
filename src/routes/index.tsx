@@ -385,7 +385,8 @@ function Contact() {
       </p>
 
       <a href="mailto:goelanshika153@gmail.com" className="mt-10 inline-flex items-center gap-3 text-2xl md:text-4xl font-bold border-b-4 border-coral pb-2 hover:gap-5 transition-all">
-        goelanshika153@gmail.com <ArrowUpRight className="w-8 h-8 text-coral" />
+        <span>goelanshika153@gmail.com</span>
+        <ArrowUpRight className="w-8 h-8 text-coral" />
       </a>
 
       <div className="mt-14 grid grid-cols-2 md:grid-cols-5 gap-3">
