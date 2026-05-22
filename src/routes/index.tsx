@@ -153,9 +153,9 @@ function About() {
 
       <div className="mt-16 grid grid-cols-3 gap-4">
         {[
-          ["8.63", "CGPA · /10"],
-          ["2nd", "Year · B.Tech"],
-          ["3+", "Projects shipped · and counting"],
+          ["4+", "Projects shipped"],
+          ["2", "Hackathons"],
+          ["1", "Research project"],
         ].map(([n, l]) => (
           <div key={n} className="rounded-3xl border border-border bg-card p-6 md:p-8">
             <div className="text-5xl md:text-6xl font-black text-coral">{n}</div>
