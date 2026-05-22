@@ -188,7 +188,19 @@ function About() {
 
 const projects = [
   {
-    n: "01", name: "NARC", tag: "Hyper-personalized news recommendation engine",
+    n: "01", name: "HieraOSG", tag: "Egocentric video temporal grounding — \"when did I last see my keys?\"",
+    desc: "Given a natural language query and an egocentric video, localize the exact temporal window containing the answer. A unified architecture combining HieraMamba's O(T) Mamba backbone with two new modules — ObjectFusionModule and ShotContrastiveLoss — to reason jointly about what objects appear, where the camera is looking, and when the answer occurs.",
+    bullets: [
+      "ObjectFusionModule: gated cross-attention fusing Co-DETR object detections (LVIS 1200+ categories) into video features, covering 99.6% of NLQ queries — gate initialized to zero so training begins as pure HieraMamba and object influence grows gradually.",
+      "ShotContrastiveLoss: InfoNCE loss over LAVILA narration-derived shot boundaries, pulling same-shot clips together and pushing cross-shot clips apart for camera-aware temporal regularization.",
+      "Full ablation across 5 configurations — object supervision alone yielded +6.86 avg recall; full model hit R@1=17.52, R@5=38.77 on Ego4D NLQ v1.",
+    ],
+    stack: ["PyTorch","Mamba-SSM","Co-DETR","EgoVLP","LMDB","NVIDIA A6000"],
+    url: "https://github.com/anshika-goel/hieraosg",
+    color: "var(--coral)",
+  },
+  {
+    n: "02", name: "NARC", tag: "Hyper-personalized news recommendation engine",
     desc: "A 5,000 → 10 article funnel powered by mood and archetype pre-filtering, BGE cross-encoder reranking, and LinUCB contextual bandits over a 46-dimensional context vector — serving personalized feeds at under 2 ms latency.",
     bullets: [
       "Modeled session-level user intent via 6-axis mood sliders, location, timestamp and behavioral archetype for effective cold-start before any interaction.",
@@ -196,10 +208,10 @@ const projects = [
     ],
     stack: ["Python","Reinforcement Learning","BGE Reranker","FastAPI"],
     url: "https://github.com/anshika-goel/narc",
-    color: "var(--coral)",
+    color: "var(--amber-accent)",
   },
   {
-    n: "02", name: "PixelForge", tag: "AI website generator — prompt to live preview in 30s",
+    n: "03", name: "PixelForge", tag: "AI website generator — prompt to live preview in 30s",
     desc: "A sequential 4-agent pipeline that turns natural language prompts into functional websites in under 30 seconds, with a real-time interactive preview system on top of FastAPI and Firebase.",
     bullets: [
       "Orchestrated planner → generator → validator → renderer agents using Generative AI for cohesive output.",
@@ -207,10 +219,10 @@ const projects = [
     ],
     stack: ["Python","JavaScript","Generative AI","Firebase"],
     url: "https://github.com/anshika-goel/pixelforge",
-    color: "var(--amber-accent)",
+    color: "var(--coral-soft)",
   },
   {
-    n: "03", name: "CleanSkies", tag: "AQI prediction platform using NASA TEMPO data",
+    n: "04", name: "CleanSkies", tag: "AQI prediction platform using NASA TEMPO data",
     desc: "An air quality prediction platform for 10+ regions, blending NASA TEMPO satellite data with real-time weather APIs to produce pollutant trends and short-term forecasts you can actually read.",
     bullets: [
       "Unified heterogeneous data sources to produce pollutant trends and short-term air quality forecasts.",
@@ -218,7 +230,7 @@ const projects = [
     ],
     stack: ["Python","TypeScript","FastAPI","MongoDB","NASA TEMPO"],
     url: "https://github.com/anshika-goel/cleanskies",
-    color: "var(--coral-soft)",
+    color: "var(--coral)",
   },
 ];
 
