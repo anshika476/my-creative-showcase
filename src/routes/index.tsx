@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, Sparkles, ArrowUpRight, ArrowRight, Github, Linkedin, Mail, Code2 } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Github, Linkedin, Mail, Code2 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -13,6 +13,7 @@ export const Route = createFileRoute("/")({
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800;900&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" },
+      { rel: "icon", type: "image/svg+xml", href: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>✨</text></svg>" },
     ],
   }),
   component: Index,
@@ -60,10 +61,6 @@ function Hero() {
   return (
     <section id="top" className="relative mx-auto max-w-7xl px-6 pt-16 pb-24 md:pt-24 md:pb-32 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-xs font-medium tracking-wide">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          AVAILABLE FOR INTERNSHIPS · 2026
-        </div>
         <h1 className="mt-8 text-6xl md:text-8xl font-black leading-[0.95]">
           Anshika
           <br />
@@ -83,10 +80,7 @@ function Hero() {
             Download résumé
           </a>
         </div>
-        <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-          <span className="inline-flex items-center gap-2"><MapPin className="w-4 h-4 text-coral" /> Himachal Pradesh, India</span>
-          <span className="inline-flex items-center gap-2"><Sparkles className="w-4 h-4 text-amber-500" /> Available 2026</span>
-        </div>
+
       </div>
 
       <div className="relative h-[480px] flex items-center justify-center">
@@ -374,11 +368,9 @@ function Wins() {
 }
 
 const socials = [
-  ["Email", "goelanshika153@gmail.com", "mailto:goelanshika153@gmail.com", Mail],
-  ["LinkedIn", "in/anshika-goel", "https://linkedin.com/in/anshika-goel", Linkedin],
-  ["GitHub", "@anshika-goel", "https://github.com/anshika-goel", Github],
-  ["LeetCode", "@anshika-goel", "https://leetcode.com/anshika-goel", Code2],
-  ["Codeforces", "@anshika-goel", "https://codeforces.com/profile/anshika-goel", Code2],
+  ["Email", "anshigoel0906@gmail.com", "mailto:anshigoel0906@gmail.com", Mail],
+  ["LinkedIn", "in/anshgoel98", "https://www.linkedin.com/in/anshgoel98/", Linkedin],
+  ["GitHub", "@anshika476", "https://github.com/anshika476", Github],
 ] as const;
 
 function Contact() {
@@ -393,8 +385,8 @@ function Contact() {
         Hiring for an internship, collaborating on a paper, or just want to chat about reinforcement learning over coffee? My inbox is open.
       </p>
 
-      <a href="mailto:goelanshika153@gmail.com" className="mt-10 inline-flex items-center gap-3 text-2xl md:text-4xl font-bold border-b-4 border-coral pb-2 hover:gap-5 transition-all">
-        <span>goelanshika153@gmail.com</span>
+      <a href="mailto:anshigoel0906@gmail.com" className="mt-10 inline-flex items-center gap-3 text-2xl md:text-4xl font-bold border-b-4 border-coral pb-2 hover:gap-5 transition-all">
+        <span>anshigoel0906@gmail.com</span>
         <ArrowUpRight className="w-8 h-8 text-coral" />
       </a>
 
