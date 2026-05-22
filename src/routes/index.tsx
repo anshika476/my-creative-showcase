@@ -242,7 +242,7 @@ function Work() {
         Things I made <span className="font-serif-italic font-normal text-coral">recently<span className="text-coral">.</span></span>
       </h2>
       <p className="mt-6 max-w-2xl text-muted-foreground">
-        Three projects spanning recommender systems, generative AI, and satellite data — each shipped end to end, from idea to deployed UI.
+        Four projects spanning egocentric video research, recommender systems, generative AI, and satellite data — each shipped end to end, from idea to deployed UI.
       </p>
 
       <div className="mt-16 space-y-8">
