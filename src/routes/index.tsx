@@ -308,16 +308,16 @@ function Toolkit() {
 }
 
 const achievements = [
-  ["01", "2nd Runner-Up · Utkarsh Robotics Challenge", "IIT Mandi annual fest · 2024"],
-  ["02", "1st position among girls · Freshers' Coding Contest", "IIT Mandi · 2024"],
+  ["01", "2nd Runner-Up · Utkarsh Robotics Challenge", "Annual tech fest · 2024"],
+  ["02", "1st position among girls · Freshers' Coding Contest", "Institute level · 2024"],
   ["03", "JEE Advanced — AIR 6667", "Top percentile entrance to IITs"],
   ["04", "JEE Main — AIR 8000", "Joint Entrance Examination"],
 ];
 
 const leadership = [
-  ["Co-Coordinator · Dance Club", "IIT Mandi", "Organized workshops and choreographed at institute-level cultural performances."],
-  ["Media Head · Xpecto Technical Fest", "IIT Mandi", "Led media and outreach with a team of juniors — promotions, social, and event communications."],
-  ["Core Member · ACM-W", "IIT Mandi", "Conducted coding contests and mentored peers in algorithms and C++."],
+  ["Co-Coordinator · Dance Club", "Cultural board", "Organized workshops and choreographed at institute-level cultural performances."],
+  ["Media Head · Xpecto Technical Fest", "Tech fest team", "Led media and outreach with a team of juniors — promotions, social, and event communications."],
+  ["Core Member · ACM-W", "Student chapter", "Conducted coding contests and mentored peers in algorithms and C++."],
 ];
 
 function Wins() {
