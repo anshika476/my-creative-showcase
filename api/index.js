@@ -1,6 +1,9 @@
 import { Readable } from 'stream';
 import server from '../dist/server/server.js';
 
+export const runtime = 'nodejs';
+export const config = { runtime: 'nodejs' };
+
 export default async function handler(req, res) {
   try {
     const proto = req.headers['x-forwarded-proto'] || 'https';
