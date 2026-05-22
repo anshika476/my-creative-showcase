@@ -84,8 +84,8 @@ function Hero() {
           </a>
         </div>
         <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-          <span className="inline-flex items-center gap-2"><MapPin className="w-4 h-4 text-coral" /> IIT Mandi · Himachal Pradesh, India</span>
-          <span className="inline-flex items-center gap-2"><Sparkles className="w-4 h-4 text-amber-500" /> CGPA 8.63 · 2nd year</span>
+          <span className="inline-flex items-center gap-2"><MapPin className="w-4 h-4 text-coral" /> Himachal Pradesh, India</span>
+          <span className="inline-flex items-center gap-2"><Sparkles className="w-4 h-4 text-amber-500" /> Available 2026</span>
         </div>
       </div>
 
@@ -106,9 +106,6 @@ function Hero() {
               <span key={t} className="px-3 py-1.5 rounded-full bg-secondary text-xs font-medium uppercase">{t}</span>
             ))}
           </div>
-        </div>
-        <div className="absolute -bottom-2 left-2 w-24 h-24 rounded-full bg-foreground text-background text-[10px] font-bold tracking-widest flex items-center justify-center animate-spin" style={{ animationDuration: "12s" }}>
-          SCROLL · EXPLORE ·
         </div>
       </div>
     </section>
@@ -156,9 +153,9 @@ function About() {
 
       <div className="mt-16 grid grid-cols-3 gap-4">
         {[
-          ["8.63", "CGPA · /10"],
-          ["2nd", "Year · B.Tech"],
-          ["3+", "Projects shipped · and counting"],
+          ["4+", "Projects shipped"],
+          ["2", "Hackathons"],
+          ["1", "Research project"],
         ].map(([n, l]) => (
           <div key={n} className="rounded-3xl border border-border bg-card p-6 md:p-8">
             <div className="text-5xl md:text-6xl font-black text-coral">{n}</div>
@@ -191,7 +188,19 @@ function About() {
 
 const projects = [
   {
-    n: "01", name: "NARC", tag: "Hyper-personalized news recommendation engine",
+    n: "01", name: "HieraOSG", tag: "Egocentric video temporal grounding — \"when did I last see my keys?\"",
+    desc: "Given a natural language query and an egocentric video, localize the exact temporal window containing the answer. A unified architecture combining HieraMamba's O(T) Mamba backbone with two new modules — ObjectFusionModule and ShotContrastiveLoss — to reason jointly about what objects appear, where the camera is looking, and when the answer occurs.",
+    bullets: [
+      "ObjectFusionModule: gated cross-attention fusing Co-DETR object detections (LVIS 1200+ categories) into video features, covering 99.6% of NLQ queries — gate initialized to zero so training begins as pure HieraMamba and object influence grows gradually.",
+      "ShotContrastiveLoss: InfoNCE loss over LAVILA narration-derived shot boundaries, pulling same-shot clips together and pushing cross-shot clips apart for camera-aware temporal regularization.",
+      "Full ablation across 5 configurations — object supervision alone yielded +6.86 avg recall; full model hit R@1=17.52, R@5=38.77 on Ego4D NLQ v1.",
+    ],
+    stack: ["PyTorch","Mamba-SSM","Co-DETR","EgoVLP","LMDB","NVIDIA A6000"],
+    url: "https://github.com/anshika-goel/hieraosg",
+    color: "var(--coral)",
+  },
+  {
+    n: "02", name: "NARC", tag: "Hyper-personalized news recommendation engine",
     desc: "A 5,000 → 10 article funnel powered by mood and archetype pre-filtering, BGE cross-encoder reranking, and LinUCB contextual bandits over a 46-dimensional context vector — serving personalized feeds at under 2 ms latency.",
     bullets: [
       "Modeled session-level user intent via 6-axis mood sliders, location, timestamp and behavioral archetype for effective cold-start before any interaction.",
@@ -199,10 +208,10 @@ const projects = [
     ],
     stack: ["Python","Reinforcement Learning","BGE Reranker","FastAPI"],
     url: "https://github.com/anshika-goel/narc",
-    color: "var(--coral)",
+    color: "var(--amber-accent)",
   },
   {
-    n: "02", name: "PixelForge", tag: "AI website generator — prompt to live preview in 30s",
+    n: "03", name: "PixelForge", tag: "AI website generator — prompt to live preview in 30s",
     desc: "A sequential 4-agent pipeline that turns natural language prompts into functional websites in under 30 seconds, with a real-time interactive preview system on top of FastAPI and Firebase.",
     bullets: [
       "Orchestrated planner → generator → validator → renderer agents using Generative AI for cohesive output.",
@@ -210,10 +219,10 @@ const projects = [
     ],
     stack: ["Python","JavaScript","Generative AI","Firebase"],
     url: "https://github.com/anshika-goel/pixelforge",
-    color: "var(--amber-accent)",
+    color: "var(--coral-soft)",
   },
   {
-    n: "03", name: "CleanSkies", tag: "AQI prediction platform using NASA TEMPO data",
+    n: "04", name: "CleanSkies", tag: "AQI prediction platform using NASA TEMPO data",
     desc: "An air quality prediction platform for 10+ regions, blending NASA TEMPO satellite data with real-time weather APIs to produce pollutant trends and short-term forecasts you can actually read.",
     bullets: [
       "Unified heterogeneous data sources to produce pollutant trends and short-term air quality forecasts.",
@@ -221,7 +230,7 @@ const projects = [
     ],
     stack: ["Python","TypeScript","FastAPI","MongoDB","NASA TEMPO"],
     url: "https://github.com/anshika-goel/cleanskies",
-    color: "var(--coral-soft)",
+    color: "var(--coral)",
   },
 ];
 
@@ -233,7 +242,7 @@ function Work() {
         Things I made <span className="font-serif-italic font-normal text-coral">recently<span className="text-coral">.</span></span>
       </h2>
       <p className="mt-6 max-w-2xl text-muted-foreground">
-        Three projects spanning recommender systems, generative AI, and satellite data — each shipped end to end, from idea to deployed UI.
+        Four projects spanning egocentric video research, recommender systems, generative AI, and satellite data — each shipped end to end, from idea to deployed UI.
       </p>
 
       <div className="mt-16 space-y-8">
@@ -311,16 +320,16 @@ function Toolkit() {
 }
 
 const achievements = [
-  ["01", "2nd Runner-Up · Utkarsh Robotics Challenge", "IIT Mandi annual fest · 2024"],
-  ["02", "1st position among girls · Freshers' Coding Contest", "IIT Mandi · 2024"],
+  ["01", "2nd Runner-Up · Utkarsh Robotics Challenge", "Annual tech fest · 2024"],
+  ["02", "1st position among girls · Freshers' Coding Contest", "Institute level · 2024"],
   ["03", "JEE Advanced — AIR 6667", "Top percentile entrance to IITs"],
   ["04", "JEE Main — AIR 8000", "Joint Entrance Examination"],
 ];
 
 const leadership = [
-  ["Co-Coordinator · Dance Club", "IIT Mandi", "Organized workshops and choreographed at institute-level cultural performances."],
-  ["Media Head · Xpecto Technical Fest", "IIT Mandi", "Led media and outreach with a team of juniors — promotions, social, and event communications."],
-  ["Core Member · ACM-W", "IIT Mandi", "Conducted coding contests and mentored peers in algorithms and C++."],
+  ["Co-Coordinator · Dance Club", "Cultural board", "Organized workshops and choreographed at institute-level cultural performances."],
+  ["Media Head · Xpecto Technical Fest", "Tech fest team", "Led media and outreach with a team of juniors — promotions, social, and event communications."],
+  ["Core Member · ACM-W", "Student chapter", "Conducted coding contests and mentored peers in algorithms and C++."],
 ];
 
 function Wins() {
@@ -385,7 +394,8 @@ function Contact() {
       </p>
 
       <a href="mailto:goelanshika153@gmail.com" className="mt-10 inline-flex items-center gap-3 text-2xl md:text-4xl font-bold border-b-4 border-coral pb-2 hover:gap-5 transition-all">
-        goelanshika153@gmail.com <ArrowUpRight className="w-8 h-8 text-coral" />
+        <span>goelanshika153@gmail.com</span>
+        <ArrowUpRight className="w-8 h-8 text-coral" />
       </a>
 
       <div className="mt-14 grid grid-cols-2 md:grid-cols-5 gap-3">
