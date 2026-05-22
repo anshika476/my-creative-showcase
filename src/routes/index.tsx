@@ -107,9 +107,6 @@ function Hero() {
             ))}
           </div>
         </div>
-        <div className="absolute -bottom-2 left-2 w-24 h-24 rounded-full bg-foreground text-background text-[10px] font-bold tracking-widest flex items-center justify-center animate-spin" style={{ animationDuration: "12s" }}>
-          SCROLL · EXPLORE ·
-        </div>
       </div>
     </section>
   );
