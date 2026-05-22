@@ -84,8 +84,8 @@ function Hero() {
           </a>
         </div>
         <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-          <span className="inline-flex items-center gap-2"><MapPin className="w-4 h-4 text-coral" /> IIT Mandi · Himachal Pradesh, India</span>
-          <span className="inline-flex items-center gap-2"><Sparkles className="w-4 h-4 text-amber-500" /> CGPA 8.63 · 2nd year</span>
+          <span className="inline-flex items-center gap-2"><MapPin className="w-4 h-4 text-coral" /> Himachal Pradesh, India</span>
+          <span className="inline-flex items-center gap-2"><Sparkles className="w-4 h-4 text-amber-500" /> Available 2026</span>
         </div>
       </div>
 
